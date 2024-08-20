@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main .main__aside{
+    width: 30%;
+    background-color: rgb(198, 137, 255);
+    min-height: 80dvh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main__products{
+    width: 69%;
+    background-color: rgb(198, 137, 255);
+    min-height: 80dvh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
