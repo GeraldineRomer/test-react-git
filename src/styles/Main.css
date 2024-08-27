@@ -42,7 +42,7 @@ i {
 
 .main .main__products{
     width: 69%;
-    background-color: rgb(198, 137, 255);
+    background-color: rgb(221, 221, 221);
     min-height: 80dvh;
     border-radius: 10px;
     display: flex;
