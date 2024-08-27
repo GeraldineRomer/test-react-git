@@ -15,9 +15,7 @@ import Cola from "../assets/productPhotos/ice-cola-glass.jpg";
 import Papas from "../assets/productPhotos/crispy-french-fries-with-ketchup-mayonnaise.jpg";
 import Explorador from "../assets/productPhotos/Captura de pantalla 2024-08-26 215338.png";
 import Aventurero from "../assets/productPhotos/slices-sausages-near-bread.jpg";
-
-
-
+import About from './About';
 interface Product {
   name: string;
   image: string;
@@ -128,9 +126,9 @@ export default function Main() {
         </div>
       </aside>
       <section className='main__products'>
-        {filteredProducts.map((product, index) => (
-          <ProductCard key={index} name={product.name} image={product.image} description={product.description} price={product.price} />
-        ))}
+          {filteredProducts.map((product, index) => (
+            <ProductCard key={index} name={product.name} image={product.image} description={product.description} price={product.price} />
+          ))}
       </section>
     </main>
   );

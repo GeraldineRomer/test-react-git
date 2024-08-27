@@ -1,0 +1,22 @@
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    min-height: 50px;
+    background-color: rgb(221, 221, 221);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about .about__title{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.about .about__text{
+    text-align: center;
+    margin: 10px 40px 20px;
+}
