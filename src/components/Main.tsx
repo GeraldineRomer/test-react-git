@@ -10,6 +10,7 @@ import { FaClock } from "react-icons/fa6";
 import Hamb from "../assets/productPhotos/sabrosa-hamburguesa-aislada-sobre-fondo-blanco-comida-rapida-hamburguesa-fresca-carne-queso.jpg";
 import Dog from "../assets/productPhotos/classic-hot-dog-with-ketchup-mustard-sauce-isolated-white-background.jpg"
 import Elephant from "../assets/productPhotos/hand-with-cooked-meat.jpg"
+import About from './About';
 interface Product {
   name: string;
   image: string;
@@ -68,9 +69,9 @@ export default function Main() {
             </div>
         </aside>
         <section className='main__products'>
-        {products.map((product, index) => (
-          <ProductCard key={index} image={product.image} description={product.description} />
-        ))}
+          {products.map((product, index) => (
+            <ProductCard key={index} image={product.image} description={product.description} />
+          ))}
         </section>
     </main>
   );
