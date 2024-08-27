@@ -4,18 +4,18 @@ import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Chip from '@mui/joy/Chip';
-import Link from '@mui/joy/Link';
 import Typography from '@mui/joy/Typography';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 interface ProductCardProps {
+  name: string;
   image: string;
   description: string;
+  price:number;
 }
 
-export default function ProductCard({ image, description }: ProductCardProps) {
+export default function ProductCard({ image, description, name, price}: ProductCardProps) {
   return (
-    <Card sx={{ marginRight: 5, marginLeft: 5, width: 320, maxWidth: '100%', boxShadow: 'lg' }}>
+    <Card sx={{ marginRight: 5, marginLeft: 5, width: 300, maxWidth: '100%', boxShadow: 'lg' }}>
       <CardOverflow>
         <AspectRatio sx={{ minWidth: 200 }}>
           <img
@@ -26,17 +26,9 @@ export default function ProductCard({ image, description }: ProductCardProps) {
         </AspectRatio>
       </CardOverflow>
       <CardContent>
-        <Typography level="body-xs">Bluetooth Headset</Typography>
-        <Link
-          href="#product-card"
-          fontWeight="md"
-          color="neutral"
-          textColor="text.primary"
-          overlay
-          endDecorator={<ArrowOutwardIcon />}
-        >
+        <Typography level="body-xs">{name}</Typography>
+
           {description}
-        </Link>
 
         <Typography
           level="title-lg"
@@ -47,14 +39,14 @@ export default function ProductCard({ image, description }: ProductCardProps) {
             </Chip>
           }
         >
-          2,900 THB
+          {price} COP
         </Typography>
         <Typography level="body-sm">
         </Typography>
       </CardContent>
       <CardOverflow>
         <Button variant="solid" color="danger" size="lg">
-          Add to cart
+          Comprar
         </Button>
       </CardOverflow>
     </Card>

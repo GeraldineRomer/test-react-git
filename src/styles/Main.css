@@ -1,12 +1,11 @@
-.main{
+.main {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
 
-.main .main__aside{
+.main .main__aside {
     width: 30%;
     background-color: rgb(221, 221, 221);
     min-height: 80dvh;
@@ -17,12 +16,12 @@
     flex-direction: column;
     transition: color 0.3s ease;
 }
+
 .main .main__aside .main__aside__sections:hover {
     color: red; 
-    /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); */
 }
 
-.main .main__aside .main__aside__sections{
+.main .main__aside .main__aside__sections {
     text-align: center;
     width: 100%;
     cursor: pointer;
@@ -40,12 +39,28 @@ i {
     font-size: 20px;
 }
 
-.main .main__products{
+.main .main__products {
     width: 69%;
     background-color: rgb(221, 221, 221);
     min-height: 80dvh;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los productos se distribuyan en múltiples filas */
+    padding: 10px; /* Añade un padding para espacio alrededor de los productos */
+    gap: 10px; /* Añade un gap para el espaciado entre productos */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es demasiado alto */
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Cambia el diseño a columna en pantallas más pequeñas */
+    }
+    
+    .main .main__aside,
+    .main .main__products {
+        width: 100%; /* Asegura que ambos componentes tomen el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior para separación */
+    }
 }
